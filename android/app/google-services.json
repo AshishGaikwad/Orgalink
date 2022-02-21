@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "685968751859",
+    "project_id": "orgalink-1",
+    "storage_bucket": "orgalink-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685968751859:android:b0058df43962b924eb0b86",
+        "android_client_info": {
+          "package_name": "tech.grastone.orgalink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685968751859-prcpjhlo7ud31ue8lbqbofsshvlhctve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoIrai-KPAnDH4EJNOVJkASji4_6Eq2hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685968751859-prcpjhlo7ud31ue8lbqbofsshvlhctve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

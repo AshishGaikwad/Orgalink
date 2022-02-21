@@ -1,0 +1,88 @@
+[
+    {
+        "id": "1",
+        "name": "All Products",
+        "displayName": "All Products",
+        "img": "https://media.istockphoto.com/photos/set-of-decorative-cosmetic-picture-id493029628?k=20&m=493029628&s=612x612&w=0&h=5mU5Zh62ALWfhCciWpyHveY2PYw146tQjytYNvC7UFI=",
+        "parent": "0"
+    },{
+        "id": "2",
+        "name": "Mens",
+        "displayName": "Mens",
+        "img": "https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg",
+        "parent": "0"
+    },{
+        "id": "3",
+        "name": "Womens",
+        "displayName": "Womens",
+        "img": "https://media.istockphoto.com/photos/set-of-decorative-cosmetic-picture-id493029628?k=20&m=493029628&s=612x612&w=0&h=5mU5Zh62ALWfhCciWpyHveY2PYw146tQjytYNvC7UFI=",
+        "parent": "0"
+    },{
+        "id": "4",
+        "name": "Kids",
+        "displayName": "Kids",
+        "img": "https://ruttenschoenen.nl/pub/media/blog/cache/1100x/magefan_blog/kids-blog-01.jpg",
+        "parent": "0"
+    },{
+        "id": "5",
+        "name": "Shoes",
+        "displayName": "Shoes",
+        "img": "https://i.pinimg.com/736x/80/c5/ee/80c5ee3fc7029be740205fae3909994d.jpg",
+        "parent": "2"
+    },{
+        "id": "6",
+        "name": "Tshirt",
+        "displayName": "Tshirt",
+        "img": "https://fashionsuggest.in/wp-content/uploads/2018/04/Mens-polos-banner-compressed.jpg",
+        "parent": "2"
+    } ,
+    {
+        "id": "7",
+        "name": "Jeans",
+        "displayName": "Jeans",
+        "img": "https://static4.salsajeans.com/images_blocks_custom/block1_80.png?1539256046",
+        "parent": "2"
+    } ,
+    {
+        "id": "8",
+        "name": "eyewear",
+        "displayName": "eyewear",
+        "img": "https://static1.lenskart.com/media/desktop/img/Nov20/25-Nov/banner2_Msit_12thJAN.jpg",
+        "parent": "2"
+    } ,
+    {
+        "id": "9",
+        "name": "Shoes",
+        "displayName": "Shoes",
+        "img": "https://i.pinimg.com/originals/9e/42/e0/9e42e09a0fb02a3e4a969ce224255ca6.jpg",
+        "parent": "3"
+    } ,
+    {
+        "id": "10",
+        "name": "TShirt",
+        "displayName": "TShirt",
+        "img": "https://m.media-amazon.com/images/S/aplus-media/sc/776fa69d-d4b1-4096-b177-bec0b9b876b0.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+        "parent": "3"
+    } ,
+    {
+        "id": "11",
+        "name": "Jeans",
+        "displayName": "Jeans",
+        "img": "https://static4.salsajeans.com/images_blocks_custom/block1_23.png?1539247800",
+        "parent": "3"
+    } ,
+    {
+        "id": "12",
+        "name": "Eyewear",
+        "displayName": "Eyewear",
+        "img": "https://thumbs.dreamstime.com/b/stylish-beautiful-fashion-girl-wear-trendy-sunglasses-close-up-banner-stylish-beautiful-fashion-girl-nose-piercing-wear-176214342.jpg",
+        "parent": "3"
+    } ,
+    {
+        "id": "8",
+        "name": "Jewellery",
+        "displayName": "Jewellery",
+        "img": "https://www.sribhavanijewels.com/wp-content/uploads/2021/12/janaki_banner.jpg",
+        "parent": "3"
+    } 
+]
