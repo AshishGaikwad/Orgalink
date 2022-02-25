@@ -6,29 +6,35 @@ import {
   StyleSheet,
   Text,
   TouchableNativeFeedback,
+  SafeAreaView,
+  Button
 } from 'react-native';
 import Colors from '../styles/Colors';
 
 const {width} = Dimensions.get('window');
 const height = width * 0.5;
-const CategoryItem = function ({cat,nav}) {
+const ProductItem = function ({product,nav}) {
+  console.log(product)
   return (
-    <TouchableNativeFeedback onPress={()=>{  nav.push(cat.hasProduct? 'ProductScreen': "ViewScreen",{catId:cat.id,catName:cat.name,hasProduct:cat.hasProduct})}}>
-      <View style={CategoryItemStyle.CategoryItemStyleBase}>
-        <Image
-          style={CategoryItemStyle.CategoryItemStyleImage}
-          source={{ 
-            uri: cat.img,
-          }}
-        />
-        <Text style={CategoryItemStyle.CategoryItemStyleText} >{cat.displayName}</Text>
+    <SafeAreaView>
+      <View>
+      <View style={ProductItemStyle.Base}>
+        <View>
+          <Image style={ProductItemStyle.Image} source={{uri: product.imgs[0]}}></Image>
+          </View>
       </View>
-    </TouchableNativeFeedback>
+      <Text>{product.name}</Text>
+      <Text>{parseFloat(product.price) }</Text>
+      <Text>{product.discount+"%"}</Text>
+      <Button title='Add to Cart'></Button>
+      <Button title='Buy'></Button>
+      </View>
+    </SafeAreaView>
   );
 };
 
-const CategoryItemStyle = StyleSheet.create({
-  CategoryItemStyleBase: {
+const ProductItemStyle = StyleSheet.create({
+  Base: {
     height: height,
     width: width,
     paddingLeft: 7,
@@ -37,9 +43,9 @@ const CategoryItemStyle = StyleSheet.create({
     paddingBottom:3.5,
     borderRadius: 2,
   },
-  CategoryItemStyleImage: {
+  Image: {
     height: '100%',
-    width: '100%',
+    width: '50%',
     borderRadius: 2,
   },
   CategoryItemStyleText:{
@@ -54,4 +60,4 @@ const CategoryItemStyle = StyleSheet.create({
       textShadowRadius:1,
   }
 });
-export default CategoryItem;
+export default ProductItem;

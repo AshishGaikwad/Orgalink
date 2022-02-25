@@ -1,17 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import {FlatList, View, StyleSheet, Text, Dimensions,ActivityIndicator} from 'react-native';
 import CategoryItem from '../modules/CategoryItem';
-
+import AppStyle from '../styles/AppStyle';
 import Colors from '../styles/Colors';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {fetchCategories} from '../models/ProductModel';
-import AppStyle from '../styles/AppStyle';
+import { fetchProduct } from '../models/ProductModel';
+import ProductItem from '../modules/ProductItem';
 
 const {width} = Dimensions.get('window');
 const height = width * 0.4;
-function ViewScreen({route, navigation}) {
+function ProductScreen({route, navigation}) {
   
-  const {catId, catName,hasProduct} = route.params;
+  const {catId, catName,baseCat} = route.params;
   const [CategoryJSON, setCategoryJSON] = useState([]);
   const [indicator, setIndicator] = useState(false);
 
@@ -20,19 +20,22 @@ function ViewScreen({route, navigation}) {
     init();
   }, []);
 
-
   async function init() {
 
     console.log(catId,"catId")
     setIndicator(true);
-    const data = await fetchCategories(catId);
+    const data = await fetchProduct(catId);
+
     setIndicator(false);
     setCategoryJSON(data);
+
+    console.log(data,"prod data")
   }
+
   return (
     <View>
       <View style={HeaderStyle.headerMain}>
-        <Text style={HeaderStyle.headerText}>{catName}</Text>
+        <Text style={HeaderStyle.headerText}>{"Products "+catName}</Text>
         <View style={HeaderStyle.headerMenus}>
           <MaterialCommunityIcons
             style={HeaderStyle.headerMenu}
@@ -43,8 +46,9 @@ function ViewScreen({route, navigation}) {
       <View style={AppStyle.baseElement}>
           {indicator == true ? <ActivityIndicator size="large" /> : <></>}
         <FlatList
+        numColumns={2}
           data={CategoryJSON}
-          renderItem={({item})=><CategoryItem cat={item} nav={navigation}/> }
+          renderItem={({item})=><ProductItem product={item} nav={navigation}/> } 
         />
         </View>
     </View>
@@ -84,4 +88,4 @@ const HeaderStyle = StyleSheet.create({
     color: Colors.textPrimaryColor,
   },
 });
-export default ViewScreen;
+export default ProductScreen;
