@@ -6,13 +6,9 @@ import {
   StyleSheet,
   Text,
   TouchableNativeFeedback,
-  SafeAreaView,
-  Button,
-  TouchableHighlight,
-  TouchableOpacity,
+  Button
 } from 'react-native';
 import Colors from '../styles/Colors';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const {width} = Dimensions.get('window');
 const height = width * 0.5;
