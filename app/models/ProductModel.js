@@ -1,12 +1,20 @@
-import database from '@react-native-firebase/database';
 import firestore from '@react-native-firebase/firestore';
 
 export const fetchProduct = async (catID)=>{
-    const productsSnapshots=   await firestore().collection("products").limit(10).where("categories", "array-contains", "Zi1E6mM44XJvvQO3Yc1o").get();
+    const productsSnapshots=   await firestore().collection("products").limit(10).where("categories", "array-contains", catID).get();
     const products = new Array();
     productsSnapshots.forEach((doc)=>{
         let prodData = doc.data();
         prodData.id = doc.id;
+        products.push(prodData);
+        products.push(prodData);
+        products.push(prodData);
+        products.push(prodData);
+        products.push(prodData);
+        products.push(prodData);
+        products.push(prodData);
+        products.push(prodData);
+        products.push(prodData);
         products.push(prodData);
     })
 

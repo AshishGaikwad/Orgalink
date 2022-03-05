@@ -35,7 +35,7 @@ function ProductScreen({route, navigation}) {
   return (
     <View>
       <View style={HeaderStyle.headerMain}>
-        <Text style={HeaderStyle.headerText}>{"Products "+catName}</Text>
+        <Text style={HeaderStyle.headerText}>{catName}</Text>
         <View style={HeaderStyle.headerMenus}>
           <MaterialCommunityIcons
             style={HeaderStyle.headerMenu}
@@ -46,6 +46,7 @@ function ProductScreen({route, navigation}) {
       <View style={AppStyle.baseElement}>
           {indicator == true ? <ActivityIndicator size="large" /> : <></>}
         <FlatList
+        style={{margin:5,padding:5}}
         numColumns={2}
           data={CategoryJSON}
           renderItem={({item})=><ProductItem product={item} nav={navigation}/> } 

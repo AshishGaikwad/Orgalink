@@ -4,34 +4,37 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import ViewScreen from './ViewScreen';
 import ProductScreen from './ProductScreen';
-
+import ProductDetailedScreen from './ProductDetailedScreen';
 
 const Stack = createNativeStackNavigator();
 const MainScreen = () => {
   return (
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="Landing">
-          <Stack.Screen
-            name="BottomTabNavigator"
-            component={BottomTabNavigator}
-            options={{headerShown: false}}
-          />
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Landing">
+        <Stack.Screen
+          name="BottomTabNavigator"
+          component={BottomTabNavigator}
+          options={{headerShown: false}}
+        />
 
         <Stack.Screen
-            name="ViewScreen"
-            component={ViewScreen}
-            options={{headerShown: false}}
-          />
+          name="ViewScreen"
+          component={ViewScreen}
+          options={{headerShown: false}}
+        />
 
-          <Stack.Screen
-            name="ProductScreen"
-            component={ProductScreen}
-            options={{headerShown: false}}
-          />
-
-
-        </Stack.Navigator>
-      </NavigationContainer>
+        <Stack.Screen
+          name="ProductScreen"
+          component={ProductScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ProductDetailedScreen"
+          component={ProductDetailedScreen}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

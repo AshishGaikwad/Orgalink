@@ -10,6 +10,9 @@ const Colors = {
     textColorActive : 'rgba(58,204,119,253)',
     fontImageColor:'rgba(255,255,255,255)',
     fontImageShadowColor:'rgba(29,28,28,255)',
+    borderColor:'rgba(230, 227, 223,255)',
+    buttonProductColor:'rgba(0, 64, 17,255)',
+    buttonHeartColor:'rgba(168, 63, 57,255)',
 }
 
 export default Colors;
