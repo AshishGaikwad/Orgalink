@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Dimensions, StyleSheet, Image} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Colors from '../styles/Colors';
+import { Badge, withBadge } from 'react-native-elements';
 function CustomHeader() {
   const {width} = Dimensions.get('window');
   const height = width * 0.4;
@@ -15,7 +16,13 @@ function CustomHeader() {
         <MaterialCommunityIcons  style={HeaderStyle.headerMenu} name="magnify" />
         <MaterialCommunityIcons  style={HeaderStyle.headerMenu} name="bell-outline" />
         <MaterialCommunityIcons  style={HeaderStyle.headerMenu} name="heart-outline" />
-        <MaterialCommunityIcons  style={HeaderStyle.headerMenu} name="shopping" />
+        <View style={HeaderStyle.headerMenu}>
+          <MaterialCommunityIcons style={{ fontSize:25,
+     color:Colors.textPrimaryColor}} name="shopping" />
+      <Badge style={{position:'absolute',top:2}} value="3" status="success" />
+
+        </View>
+        
       </View>
     </View>
   );
